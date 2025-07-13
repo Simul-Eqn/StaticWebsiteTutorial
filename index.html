@@ -1,0 +1,138 @@
+<!-- This is a comment! Anything enclosed within this will be ignored when the website is rendering :) -->
+<!-- I think this webpage is useful so please don't edit out useful information from here... -->
+<!-- 
+Comments 
+can 
+have 
+multiple
+lines
+too
+-->
+<!--
+Structure of a HTML file (specifies all the elements to e.g. display): 
+
+! DOCTYPE html>
+html>
+    head>
+        Specifies other things like stylesheets or title 
+    /head>
+    body>
+        Content to be displayed goes here 
+    /body>
+/html>
+
+(I removed all the start angle brackets just in case, to make sure the browser doesnt accidentally try rendering it) 
+
+Outside of this structure, different people have their different styles :) 
+Some people will make it organized in <body>, having <header> then <section>s then <footer> 
+Some may not bother being that organized (or want to give web crawlers a hard time) and have a chaotic mess of <div>s 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sample Website</title> <!-- Display title -->
+
+    <link rel="stylesheet" href="index.css"> <!-- Include index.css as a stylesheet -->
+
+    <link rel="icon" type="image/x-icon" href="assets/icon.png"> <!-- Have an icon for the website in the browser -->
+
+</head>
+<body>
+    <!-- Website Header -->
+    <header>
+        <h1>Welcome to Sample Website</h1> <!-- <h1> is big heading. <h?> is heading, and the smaller the number (smallest is 1), the larger the heading -->
+        <nav> <!-- Navigation bar -->
+            <ul> <!-- ul means unordered list -->
+                <!-- li means list item -->
+                <li><a href="#about">About</a></li> <!-- the <a> tag is usually used for text hyperlinks, href is where the hyperlink goes to, # stands for going to an id (so #about means go to the element with id="about") -->
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#form">Request Access</a></li>
+                <!-- Hyperlinks can also go to other webpages, which will be redirects -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About This Page</h2>
+        <p>This website demonstrates various HTML and CSS elements to help beginners understand basic concepts.</p> <!-- <p> means paragraph text -->
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools">
+        <h2>Useful Tools</h2>
+        <ul>
+            <!-- In <a> tag, setting target="_blank" makes the link open it in a new tab instead (or sometimes new window depending on browser config) -->
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <li><a href="https:/dash.cloudflare.com/" target="_blank">Cloudflare Dashboard</a></li>
+            <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+            <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li> 
+            <li><a href="https://codepen.io/" target="_blank">CodePen</a></li>
+        </ul>
+        <!-- Example of an image -->
+        <img src="./assets/icon.png" alt="Example image" /> <!-- NOTE that the <img> tag doesn't have a </img>, it just directly ends with /> (instead of > ) !! Though browsers usually auto-correct it if they see this mistake but it's good to take note of this -->
+    </section>
+
+    <!-- Request Access Form Section -->
+    <!-- NOTE: This does not work if you request access on your live server preview because granting access requires a secret token I'm not giving you all HAHA -->
+    <section id="form">
+        <h2>Give me access!!</h2>
+        <form>
+            <label for="name">GitHub Username:</label>
+            <input type="text" id="name" name="GitHub Username" required> 
+
+            <label for="message">(optional) Extra Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Request Access</button> <!-- This submit button will -->
+        </form>
+    </section>
+
+
+    <!-- JavaScript script to handle the form -->
+    <!-- This script can be placed anywhere on the website -->
+    <script>
+        document.querySelector("form").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+
+            try {
+                const response = await fetch("https://staticwebsitegrantaccess.qubitmechanics.workers.dev/api/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name,
+                        message
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status}`);
+                }
+
+                const result = await response.json();
+                alert("Access request successful! You should receive an email invite soon.");
+            } catch (error) {
+                console.error(error);
+                alert("Failed to request access.");
+            }
+        });
+    </script>
+
+
+    <!-- Website Footer -->
+    <footer>
+        <p>No rights reserved.</p>
+    </footer>
+</body>
+</html>

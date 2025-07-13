@@ -1,0 +1,41 @@
+Instructions to update website 
+
+Setup: Clone repository, Fetch/Pull Origin (painful but you only need to do these once) 
+1. Download GitHub Desktop and Visual Studio Code 
+(GitHub Desktop is required to get and update the website code without needing to run scary command in terminals, while Visual Studio Code is the easiest way (that I know of) to preview the website before sending updated code, so that you don't accidentally send code that errors or looks bad) 
+
+2. Open GitHub Desktop, log in, and clone repository using the web url: https://github.com/Simul-Eqn/StaticWebsiteTutorial.git 
+
+3. Fetch origin and pull origin if you can. Ensure "current branch" is set to main, otherwise, click it and change to main (explained in branch section). Now, open in Visual Studio Code (if you don't see this option, in GitHub go to File -> Options, then Integrations --> set External Editor to Visual Studio Code, press Save) (alternatively, open Visual Studio Code and then open folder of this repository)
+
+4. In Visual Studio Code, go to Extensions and search for "live server" (this is needed to preview the website). Download it, restart visual studio code if it asks you to. 
+Download "Live Server Preview" as well (I'm not sure this actually matters much but it can't hurt; unless you have trouble w installing it) 
+
+
+NOTE: Visual Studio Code actually has its own way to connect to GitHub as well, and many people use the Visual Studio Code's built-in GitHub integration thing. 
+However, I find it much harder to use than GitHub Desktop and I think it's also very unintuitive if you're not familiar with the terminology, so I'll be showing the way using GitHub Desktop instead (I personally use GitHub Desktop) 
+But if other tutorials seem similar or different, or people talk about GitHub Visual Studio Code, they are talking about something else. 
+
+
+
+Chapter 1: Preview and Commit, Push Origin
+
+5. Check again that, if you press "Fetch Origin" in GitHub, it doesn't tell you there are more updates you need to bring to your computer ("Pull Origin"). Otherwise, Pull Origin to get those updates (and avoid something called merge conflicts that are painful to deal with). Also, check that "Current Branch" is "main" 
+
+6. Open in Visual Studio Code and open the file TODO 
+
+7. Edit the relevant HTML and CSS. TODO 
+
+8. When you want to preview, save the file, then click the top middle of visual studio code (should be a search icon and "StaticWebsiteTutorial" as text beside it), and type in "> open with live server" and select the option that pops up (the option may show up before you finish typing, that's fine) (the > is needed else the option won't show up). The preview should automatically appear in your default browser. 
+
+9. Once you're done previewing and think what you have works, go back to GitHub Desktop, write a commit message ("Summary (required)"), then Commit. Then, Push Origin. Once that's done (you see no more blue buttons) then everything's good 
+
+
+
+Chapter 2: Branch and Pull Request 
+TODO
+
+
+Chapter 3: Merge conflicts (you need a friend to be able to do this) 
+TODO 
+
