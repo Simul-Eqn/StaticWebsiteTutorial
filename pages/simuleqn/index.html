@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simultaneous Equations</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Simultaneous Equations</h1>
+      <p>Simul-Eqn is short for Simultaneous Euations. Enter up to 2 linear equations in two variables to solve simultaneous equations here:</p>
+    </header>
+
+    <main>
+      <div class="input-section">
+        <label for="eq1">Equation 1:</label>
+        <input type="text" id="eq1" placeholder="e.g. 2x + 3y = 6">
+        
+        <label for="eq2">Equation 2:</label>
+        <input type="text" id="eq2" placeholder="e.g. x - y = 1">
+        
+        <button onclick="visualizeEquations()">Visualize</button>
+      </div>
+
+      <div class="output-section" id="output">
+        <p>Results will appear here after you click "Visualize".</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>No guarantees are made about the accuracy of this solver.</p>
+      <p><a href="../../">&larr; Back to home</a></p>
+    </footer>
+  </div>
+
+  <script>
+    function visualizeEquations() {
+      const eq1 = document.getElementById("eq1").value.trim(); // TODO impement something to extract variable names and validate that it is a simultaneous equation 
+      const eq2 = document.getElementById("eq2").value.trim();
+      const output = document.getElementById("output");
+
+      if (!eq1 || !eq2) {
+        output.innerHTML = "<p>Please enter both equations.</p>";
+        return;
+      }
+
+      output.innerHTML = `
+        <h3>Visualization Output</h3>
+        <p><strong>Equation 1:</strong> ${eq1}</p>
+        <p><strong>Equation 2:</strong> ${eq2}</p>
+        <p>No solver programmed out yet...</p>
+      `;
+      // TODO solve the simultaneous equation 
+    }
+  </script>
+</body>
+</html>

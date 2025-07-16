@@ -25,10 +25,15 @@ Chapter 1: Preview and Commit, Push Origin
 6. Open in Visual Studio Code and open the file TODO 
 
 7. Edit the relevant HTML and CSS. TODO 
+Make a copy of the folder in pages/anotherpage to somewhere else (e.g. pages/\[yourname\])
+HTML: main index.html needs to be edited to show your page in the list; index.html of anotherpage has text that can be edited. 
+CSS: index.css of anotherpage lets you change colour of footer hyperlink 
 
 8. When you want to preview, save the file, then click the top middle of visual studio code (should be a search icon and "StaticWebsiteTutorial" as text beside it), and type in "> open with live server" and select the option that pops up (the option may show up before you finish typing, that's fine) (the > is needed else the option won't show up). The preview should automatically appear in your default browser. 
 
 9. Once you're done previewing and think what you have works, go back to GitHub Desktop, write a commit message ("Summary (required)"), then Commit. Then, Push Origin. Once that's done (you see no more blue buttons) then everything's good 
+
+
 
 
 

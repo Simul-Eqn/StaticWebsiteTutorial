@@ -51,6 +51,7 @@ Some may not bother being that organized (or want to give web crawlers a hard ti
             <ul> <!-- ul means unordered list -->
                 <!-- li means list item -->
                 <li><a href="#about">About</a></li> <!-- the <a> tag is usually used for text hyperlinks, href is where the hyperlink goes to, # stands for going to an id (so #about means go to the element with id="about") -->
+                <li><a href="#pages">Peoples' Pages</a></li>
                 <li><a href="#tools">Tools</a></li>
                 <li><a href="#form">Request Access</a></li>
                 <!-- Hyperlinks can also go to other webpages, which will be redirects -->
@@ -61,7 +62,63 @@ Some may not bother being that organized (or want to give web crawlers a hard ti
     <!-- About Section -->
     <section id="about">
         <h2>About This Page</h2>
-        <p>This website demonstrates various HTML and CSS elements to help beginners understand basic concepts.</p> <!-- <p> means paragraph text -->
+        <p>This website demonstrates various HTML and CSS elements.</p> <!-- <p> means paragraph text -->
+    </section>
+
+    <!-- Peoples' Pages -->
+    <section id="pages">
+        <h2>Peoples' Pages!!</h2>
+        <p>Here you can find everyone's pages</p> 
+
+        <!-- Cards scroller: everyone's cards are here -->
+        <div class="card-row-container">
+            <button class="scroll-btn left" onclick="scrollCards(-1)">&#9664;</button>
+
+            <div class="card-row" id="cardRow">
+
+                <!-- EACH OF THESE <a> tags is a card! -->
+
+                <!-- This is my card! -->
+                <a href="./pages/simuleqn" class="card">
+                    <img src="./assets/icon.png" alt="Simul-Eqn"> <!-- alt text is what's read by screenreaders (for accessibility e.g. blind people); also used by webscrapers to train AI though -->
+                    <div class="card-text">Simul-Eqn</div>
+                </a>
+
+                <!-- These are placeholder cards! Feel free to edit them!! -->
+                <a href="./pages/anotherpage" class="card">
+                    <img src="./assets/icon.png" alt="Another Page">
+                    <div class="card-text">Another Page</div>
+                </a>
+
+                <a href="./pages/anotherpage" class="card">
+                    <img src="./assets/icon.png" alt="Another Page">
+                    <div class="card-text">Another Page</div>
+                </a>
+
+                <a href="./pages/anotherpage" class="card">
+                    <img src="./assets/icon.png" alt="Another Page">
+                    <div class="card-text">Another Page</div>
+                </a>
+
+                <a href="./pages/anotherpage" class="card">
+                    <img src="./assets/icon.png" alt="Another Page">
+                    <div class="card-text">Another Page</div>
+                </a>
+
+                <!-- Add more cards if you want! -->
+
+            </div>
+
+            <button class="scroll-btn right" onclick="scrollCards(1)">&#9654;</button>
+        </div>
+
+        <script>
+            function scrollCards(direction) {
+            const row = document.getElementById("cardRow");
+            const scrollAmount = 200;
+            row.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+        </script>
     </section>
 
     <!-- Tools Section -->
