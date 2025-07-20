@@ -1,6 +1,6 @@
 Instructions to update website 
 
-Setup: Clone repository, Fetch/Pull Origin (painful but you only need to do these once) 
+Setup: Clone repository, Fetch/Pull Origin (can be painful but you only need to do these once) 
 1. Download GitHub Desktop and Visual Studio Code 
 (GitHub Desktop is required to get and update the website code without needing to run scary command in terminals, while Visual Studio Code is the easiest way (that I know of) to preview the website before sending updated code, so that you don't accidentally send code that errors or looks bad) 
 
@@ -32,6 +32,8 @@ CSS: index.css of anotherpage lets you change colour of footer hyperlink
 8. When you want to preview, save the file, then click the top middle of visual studio code (should be a search icon and "StaticWebsiteTutorial" as text beside it), and type in "> open with live server" and select the option that pops up (the option may show up before you finish typing, that's fine) (the > is needed else the option won't show up). The preview should automatically appear in your default browser. 
 
 9. Once you're done previewing and think what you have works, go back to GitHub Desktop, write a commit message ("Summary (required)"), then Commit. Then, Push Origin. Once that's done (you see no more blue buttons) then everything's good 
+
+10. If you're unlucky (if someone else committed and pushed while you're still editing), you'll already face something called a merge commit, and possibly even a merge conflict. If that happens... uhh... I don't really know how to help you sorry. If you're lucky GitHub will be able to resolve it for you, otherwise  it's tough. 
 
 
 
