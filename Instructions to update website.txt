@@ -1,5 +1,7 @@
 Instructions to update website 
 
+NOTE: Video tutorial, with more detail, is available at this link: [https://drive.google.com/drive/folders/1IRfxUiKXHpgJR4n6OnW8uB8oxZpNZOTZ?usp=sharing](https://drive.google.com/drive/folders/1IRfxUiKXHpgJR4n6OnW8uB8oxZpNZOTZ?usp=sharing)
+
 Setup: Clone repository, Fetch/Pull Origin (can be painful but you only need to do these once) 
 1. Download GitHub Desktop and Visual Studio Code 
 (GitHub Desktop is required to get and update the website code without needing to run scary command in terminals, while Visual Studio Code is the easiest way (that I know of) to preview the website before sending updated code, so that you don't accidentally send code that errors or looks bad) 
@@ -22,10 +24,11 @@ Chapter 1: Preview and Commit, Push Origin
 
 5. Check again that, if you press "Fetch Origin" in GitHub, it doesn't tell you there are more updates you need to bring to your computer ("Pull Origin"). Otherwise, Pull Origin to get those updates (and avoid something called merge conflicts that are painful to deal with). Also, check that "Current Branch" is "main" 
 
-6. Open in Visual Studio Code and open the file TODO 
+6. Open in Visual Studio Code and open the file index.html. 
 
-7. Edit the relevant HTML and CSS. TODO 
+7. Read the HTML comments and look at the CSS (pause the video here to look at the HTML comments if you want to understand it better) 
 Make a copy of the folder in pages/anotherpage to somewhere else (e.g. pages/\[yourname\])
+These will be the edits you need to make: 
 HTML: main index.html needs to be edited to show your page in the list; index.html of anotherpage has text that can be edited. 
 CSS: index.css of anotherpage lets you change colour of footer hyperlink 
 
@@ -45,4 +48,8 @@ TODO
 
 Chapter 3: Merge conflicts (you need a friend to be able to do this) 
 TODO 
+
+
+Chapter X (BONUS) Cloudflare deployment 
+Watch the video :) 
 
