@@ -1,5 +1,7 @@
 Instructions to update website 
 
+First request access to push to my repository, at [https://staticwebsitetutorial.pages.dev/](https://staticwebsitetutorial.pages.dev/)
+
 NOTE: Video tutorial, with more detail, is available at this link: [https://drive.google.com/drive/folders/1IRfxUiKXHpgJR4n6OnW8uB8oxZpNZOTZ?usp=sharing](https://drive.google.com/drive/folders/1IRfxUiKXHpgJR4n6OnW8uB8oxZpNZOTZ?usp=sharing)
 
 Setup: Clone repository, Fetch/Pull Origin (can be painful but you only need to do these once) 
