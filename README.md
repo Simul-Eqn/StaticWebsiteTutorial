@@ -3,7 +3,7 @@ Practice updating a website, and see your changes live!! This is actually more o
 
 
 Link to website: 
-TODO 
+[https://staticwebsitetutorial.pages.dev/](https://staticwebsitetutorial.pages.dev/)
 
 Please go to that website to request push access to this GitHub Repository. 
 
